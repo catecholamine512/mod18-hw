@@ -1,7 +1,6 @@
 #pragma once
 #include <string>
 #include <fstream>
-#include <iostream>
 
 
 using namespace std;
@@ -13,7 +12,7 @@ class Message {
 	std::string _receiver;
 
 public:
-	Message(string text, string sender, string receiver):_text(text), _sender(sender), _receiver(receiver) {}
+	Message(string text, string sender, string receiver): _text(text), _sender(sender), _receiver(receiver) {}
 	friend fstream& operator >>(fstream& is, Message& obj);
 	friend ostream& operator <<(ostream& os, const Message& obj);
 };
